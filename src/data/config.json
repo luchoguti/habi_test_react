@@ -1,0 +1,154 @@
+{
+  "config":[
+    {
+      "render_component": "StepTextField",
+      "path": "/data-client",
+      "order": 9,
+      "description": "Nombre y apellidos",
+      "name_back": "name_client",
+      "type": "text",
+      "required": true
+    },
+    {
+      "render_component": "StepTextField",
+      "path": "/data-client-email",
+      "order": 2,
+      "description": "Correo",
+      "name_back": "email_client",
+      "type": "email",
+      "required": true
+    },
+    {
+      "render_component": "StepTextField",
+      "path": "/data-client-address",
+      "order": 3,
+      "description": "Dirección del apartamento",
+      "name_back": "address_client",
+      "type": "text",
+      "required": true
+    },
+    {
+      "render_component": "StepSelection",
+      "path": "/data-client-floor",
+      "order": 4,
+      "description": "Numero de piso donde esta el apartamento",
+      "name_back": "apartament_floor",
+      "type": "select",
+      "required": true,
+      "option_max": 50
+    },
+    {
+      "render_component": "StepCheckBox",
+      "path": "/data-client-apartment-options",
+      "order": 5,
+      "description": "El apartamento tiene alguna de las siguientes opciones",
+      "name_back": "apartament_options",
+      "type": "checkbox",
+      "required": false,
+      "options": [
+        {
+          "id": 1,
+          "name": "Zona BBQ",
+          "value": "zona_bbq",
+          "checked": false
+        },
+        {
+          "id": 2,
+          "name": "Salón comunal",
+          "checked": false,
+          "value": "salon_comunal"
+        },
+        {
+          "id": 3,
+          "name": "Parque de juegos",
+          "checked": false,
+          "value": "parque_juegos"
+        }
+      ]
+    },
+    {
+      "render_component": "StepRadioBoxes",
+      "path": "/data-client-apartment-options-parking",
+      "order": 6,
+      "description": "El inmueble tiene parqueadero?",
+      "name_back": "apartment_options_parking",
+      "type": "radio",
+      "required": true,
+      "options":[
+        {
+          "id": 1,
+          "name": "Si",
+          "value": true
+        },
+        {
+          "id": 2,
+          "name": "No",
+          "value": false
+        }
+      ],
+      "actions": {
+        "sub_option_one": {
+          "render_component": "StepRadioBoxes",
+          "type": "radio",
+          "description": "Es cubierto?",
+          "name_back": "apartment_options_parking_covered",
+          "options":[
+            {
+              "id": 1,
+              "name": "Si",
+              "value": true
+            },
+            {
+              "id": 2,
+              "name": "No",
+              "value": false
+            }
+          ]
+        },
+        "sub_option_two": {
+
+        }
+      }
+    },
+    {
+      "render_component": "StepTextField",
+      "path": "/data-client-sell-apartment",
+      "order": 7,
+      "description": "En cuanto vende su apartamento?",
+      "name_back": "client_sell_apartment",
+      "type": "number",
+      "required": true
+    },
+    {
+      "render_component": "StepTextField",
+      "path": "/data-client-upload-file",
+      "order": 8,
+      "description": "Foto del inmueble",
+      "name_back": "client_upload_file",
+      "type": "file",
+      "required": false
+    },
+    {
+      "render_component": "StepRadioBoxes",
+      "path": "/data-client-apartment-have-lift",
+      "order": 1,
+      "description": "El inmueble tiene ascensor?",
+      "name_back": "apartment_have_lift",
+      "type": "radio",
+      "required": true,
+      "options":[
+        {
+          "id": 1,
+          "name": "Si",
+          "value": true
+        },
+        {
+          "id": 2,
+          "name": "No",
+          "value": false
+        }
+      ],
+      "actions": {}
+    }
+  ]
+}
